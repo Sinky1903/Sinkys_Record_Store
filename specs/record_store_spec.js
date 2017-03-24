@@ -12,7 +12,7 @@ describe('Record Store', function() {
   beforeEach(function() {
     record1 = new Record("Oasis", "Be here now", 10);
     record2 = new Record("King of Leon", "Youth and Young Manhood", 8);
-    record1 = new Record("Kasabian", "Kasabian", 9;
+    record3 = new Record("Kasabian", "Kasabian", 9);
     recStore = new RecStore("Sinkys", "Aberdeen", 1000, []);
   });
 
@@ -38,7 +38,10 @@ describe('Record Store', function() {
   });
 
   // it('should get all records from inventory', function() {
-  //   assert.equal()
-  // })
+  //   recStore.addRecord(record1);
+  //   recStore.addRecord(record2);
+  //   recStore.addRecord(record3);
+  //   assert.equal(, recStore.inventory());
+  // });
 
 })
