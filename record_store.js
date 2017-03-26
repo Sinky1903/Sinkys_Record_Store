@@ -23,6 +23,7 @@ var RecStore = function(name, city, balance) {
   //   };
   // };
 this.showMoneyInfo = function() {
+  
 }
 
 };

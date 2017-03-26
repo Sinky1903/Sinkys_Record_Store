@@ -37,12 +37,12 @@ describe('Record Store', function() {
     assert.equal(1, recStore.inventory.length);
   });
 
-  // it('should get all records from inventory', function() {
-  //   recStore.addRecord(record1);
-  //   recStore.addRecord(record2);
-  //   recStore.addRecord(record3);
-  //   assert.equal(, recStore.showInventory());
-  // });
+  it('should get all records from inventory', function() {
+    recStore.addRecord(record1);
+    recStore.addRecord(record2);
+    recStore.addRecord(record3);
+    assert.deepEqual([record1, record2, record3], recStore.showInventory());
+  });
 
   it('should increase balance by price of record', function() {
     recStore.addRecord(record1);
@@ -66,7 +66,7 @@ describe('Record Store', function() {
   //   recStore.addRecord(record2);
   //   recStore.addRecord(record3);
   //   recStore.sellRecord(record1);
-    
+
   // })
 
 })

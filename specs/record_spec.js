@@ -6,7 +6,7 @@ describe('Record', function() {
   var record1;
 
   beforeEach(function () {
-    record1 = new Record("Oasis", "Be here now", 10);
+    record1 = new Record("Oasis", "Be Here Now", 10);
   });
 
   it('should have an artist', function() {
@@ -14,7 +14,7 @@ describe('Record', function() {
   });
 
   it('should have a title', function() {
-    assert.equal("Be here now", record1.title);
+    assert.equal("Be Here Now", record1.title);
   });
 
   it('should have a price', function() {
@@ -22,7 +22,7 @@ describe('Record', function() {
   });
 
   it('should return record details', function() {
-    assert.deepEqual("Oasis Be Here Now 10", record1.getRecordInfo());
+    assert.equal("Oasis Be Here Now 10", record1.showRecordInfo());
   });
 
 });
