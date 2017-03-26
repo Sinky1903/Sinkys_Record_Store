@@ -4,8 +4,6 @@ var assert = require('assert');
 describe('Record', function() {
 
   var record1;
-  var record2;
-  var record3;
 
   beforeEach(function () {
     record1 = new Record("Oasis", "Be here now", 10);
@@ -21,6 +19,10 @@ describe('Record', function() {
 
   it('should have a price', function() {
     assert.equal(10, record1.price);
+  });
+
+  it('should return record details', function() {
+    assert.deepEqual("Oasis Be Here Now 10", record1.getRecordInfo());
   });
 
 });
