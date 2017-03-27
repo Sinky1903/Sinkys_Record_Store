@@ -42,6 +42,7 @@ describe('Record Store', function() {
     recStore.addRecord(record2);
     recStore.addRecord(record3);
     assert.deepEqual([record1, record2, record3], recStore.showInventory());
+
   });
 
   it('should increase balance by price of record', function() {
@@ -52,21 +53,21 @@ describe('Record Store', function() {
     assert.equal(1010, recStore.balance);
   });
 
-  // it('should increase balance by price of record and remove record from inventory', function() {
-  //   recStore.addRecord(record1);
-  //   recStore.addRecord(record2);
-  //   recStore.addRecord(record3);
-  //   recStore.sellRecordFromInventory(record1);
-  //   assert.equal(1010, recStore.balance);
-  //   assert.equal(2, recStore.inventory.length);
-  // });
+  it('should increase balance by price of record and remove record from inventory', function() {
+    recStore.addRecord(record1);
+    recStore.addRecord(record2);
+    recStore.addRecord(record3);
+    recStore.sellRecordFromInventory(record1);
+    assert.equal(1010, recStore.balance);
+    assert.equal(2, recStore.inventory.length);
+  });
 
-  // it('should show Balance of store and total of inventory', function() {
-  //   recStore.addRecord(record1);
-  //   recStore.addRecord(record2);
-  //   recStore.addRecord(record3);
-  //   recStore.sellRecord(record1);
-
-  // })
+  it('should show Balance of store and total of inventory', function() {
+    recStore.addRecord(record1);
+    recStore.addRecord(record2);
+    recStore.addRecord(record3);
+    recStore.sellRecord(record1);
+    assert.equal(1037, recStore.showMoneyInfo());
+  });
 
 })
